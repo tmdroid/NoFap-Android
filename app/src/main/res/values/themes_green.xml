@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Generated with http://android-holo-colors.com -->
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <style name="Green" parent="@style/_Green"/>
+
+  <style name="_Green" parent="android:Theme.Holo.Light">
+
+    <item name="android:buttonStyle">@style/ButtonGreen</item>
+
+    <item name="android:imageButtonStyle">@style/ImageButtonGreen</item>
+
+  </style>
+
+</resources>

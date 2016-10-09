@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Generated with http://android-holo-colors.com -->
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <style name="Purple" parent="@style/_Purple"/>
+
+  <style name="_Purple" parent="android:Theme.Holo.Light">
+
+    <item name="android:buttonStyle">@style/ButtonPurple</item>
+
+    <item name="android:imageButtonStyle">@style/ImageButtonPurple</item>
+
+  </style>
+
+</resources>
