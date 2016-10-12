@@ -33,7 +33,8 @@ public class NoFap extends AsyncTask<String, Void, Void> {
 
     public void get(String category) {
         boolean religious = Preferences.getReligious();
-        String requestUrl = baseUrl + C_CATEGORY + category + "&" + C_RELIGIOUS + religious;
+        String requestUrl = baseUrl + C_CATEGORY + category + "&" + C_RELIGIOUS + religious
+                + "&platform=androidNative";
 
         execute(requestUrl);
     }
