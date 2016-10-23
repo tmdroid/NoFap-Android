@@ -5,7 +5,7 @@ android {
     buildToolsVersion "23.0.3"
     defaultConfig {
         applicationId 'org.nofap.emergency'
-        minSdkVersion 9
+        minSdkVersion 15
         targetSdkVersion 24
         versionCode 1
         versionName "1.0"
@@ -25,5 +25,6 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:+'
     compile 'org.jsoup:jsoup:1.9.2'
+    compile 'com.android.support:customtabs:+'
     compile 'com.android.support:percent:+'
 }
