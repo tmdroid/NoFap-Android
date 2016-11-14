@@ -33,8 +33,6 @@ class NoFap extends AsyncTask<String, Void, Void> {
         String requestUrl = baseUrl + C_CATEGORY + category + "&" + C_RELIGIOUS + religious
                 + "&platform=androidNative";
 
-        Log.d("URL", requestUrl);
-
         execute(requestUrl);
     }
 

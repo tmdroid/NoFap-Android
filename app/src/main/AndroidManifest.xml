@@ -3,7 +3,6 @@
     package="ro.adlabs.nofap">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.SET_DEBUG_APP" />
 
     <application
         android:name="ro.adlabs.nofap.Application"
