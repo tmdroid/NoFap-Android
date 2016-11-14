@@ -13,28 +13,27 @@ import org.jsoup.nodes.Document;
 
 import java.io.IOException;
 
-/**
- * Created by Danny on 9/9/2016.
- */
-public class NoFap extends AsyncTask<String, Void, Void> {
+class NoFap extends AsyncTask<String, Void, Void> {
     private static final String C_CATEGORY = "cat=";
     private static final String C_RELIGIOUS = "religious=";
 
-    public static final String CATEGORY_EMERGENCY = "em";
-    public static final String CATEGORY_REJECTION = "rej";
-    public static final String CATEGORY_DEPRESSION = "dep";
-    public static final String CATEGORY_RELAPSED = "rel";
+    static final String CATEGORY_EMERGENCY = "em";
+    static final String CATEGORY_REJECTION = "rej";
+    static final String CATEGORY_DEPRESSION = "dep";
+    static final String CATEGORY_RELAPSED = "rel";
 
     private String baseUrl = "https://emergency.nofap.com/director.php?";
 
-    public NoFap() {
+    NoFap() {
     }
 
 
-    public void get(String category) {
+    void get(String category) {
         boolean religious = Preferences.getReligious();
         String requestUrl = baseUrl + C_CATEGORY + category + "&" + C_RELIGIOUS + religious
                 + "&platform=androidNative";
+
+        Log.d("URL", requestUrl);
 
         execute(requestUrl);
     }

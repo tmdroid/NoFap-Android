@@ -47,7 +47,7 @@ public class Home extends AppCompatActivity implements View.OnClickListener{
         cbReligious.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                Log.d("App", "check changed");
+                Preferences.setReligious(isChecked);
             }
         });
 
