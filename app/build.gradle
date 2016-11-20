@@ -7,8 +7,8 @@ android {
         applicationId 'org.nofap.emergency'
         minSdkVersion 15
         targetSdkVersion 24
-        versionCode 100
-        versionName "1.0-beta"
+        versionCode 101
+        versionName "1.01-beta"
     }
     buildTypes {
         release {
