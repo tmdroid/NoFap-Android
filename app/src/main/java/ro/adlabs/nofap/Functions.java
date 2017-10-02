@@ -8,9 +8,8 @@ import android.support.customtabs.CustomTabsClient;
 import android.support.customtabs.CustomTabsServiceConnection;
 import android.widget.CheckBox;
 
-/**
- * Created by Danny on 9/9/2016.
- */
+import ro.adlabs.nofap.Application;
+
 public class Functions {
     public static void religious(CheckBox religious) {
         if (religious.isChecked()) {
@@ -20,33 +19,12 @@ public class Functions {
         }
     }
 
-    public static void emergency() {
-        NoFap noFap = new NoFap();
-        noFap.get(NoFap.CATEGORY_EMERGENCY);
-    }
-
-    public static void rejection() {
-        NoFap noFap = new NoFap();
-        noFap.get(NoFap.CATEGORY_REJECTION);
-    }
-
-    public static void depression() {
-        NoFap noFap = new NoFap();
-        noFap.get(NoFap.CATEGORY_DEPRESSION);
-    }
-
-    public static void relapsed() {
-        NoFap noFap = new NoFap();
-        noFap.get(NoFap.CATEGORY_RELAPSED);
-    }
-
     public static void submitNew(Context context) {
         String url = "https://emergency.nofap.com/suggestor.php";
         Intent i = new Intent(Intent.ACTION_VIEW);
         i.setData(Uri.parse(url));
         context.startActivity(i);
     }
-
 
     /**
      * Check if Chrome CustomTabs are supported.

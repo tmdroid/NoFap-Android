@@ -3,9 +3,6 @@ package ro.adlabs.nofap;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 
-/**
- * Created by Danny on 9/9/2016.
- */
 public class Preferences {
 
     private static final String KEY_RELIGIOUS = "getReligious";
@@ -18,7 +15,7 @@ public class Preferences {
         SharedPreferences prefs = getSharedPreferences();
         SharedPreferences.Editor e = prefs.edit();
         e.putBoolean(KEY_RELIGIOUS, religious);
-        e.commit();
+        e.apply();
     }
 
     public static boolean getReligious() {

@@ -11,4 +11,6 @@
     <color name="background_gray">#73716E</color>
     <color name="color_white">#FFFFFF</color>
 
+    <color name="chrome_tabs">#36465D</color>
+
 </resources>

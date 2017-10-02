@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="ro.adlabs.nofap.Home">
+    tools:context="ro.adlabs.nofap.activity.Home">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,7 +16,7 @@
 
         <!-- Emergency -->
         <LinearLayout
-            android:id="@+id/ll_em"
+            android:id="@+id/ll_emergency"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_margin="0dp"
@@ -50,7 +50,7 @@
 
         <!-- Rejection -->
         <LinearLayout
-            android:id="@+id/ll_rej"
+            android:id="@+id/ll_rejection"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_margin="0dp"
@@ -77,7 +77,7 @@
 
         <!-- Depression -->
         <LinearLayout
-            android:id="@+id/ll_dep"
+            android:id="@+id/ll_depression"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_margin="0dp"
@@ -106,7 +106,7 @@
 
         <!-- Relapsed -->
         <LinearLayout
-            android:id="@+id/ll_rel"
+            android:id="@+id/ll_relapsed"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_margin="0dp"
@@ -135,7 +135,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/llReligious"
+        android:id="@+id/ll_religious"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
@@ -154,7 +154,7 @@
             android:orientation="horizontal">
 
             <android.support.v7.widget.AppCompatCheckBox
-                android:id="@+id/cbReligious"
+                android:id="@+id/cb_religious"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:buttonTint="@color/color_white" />
