@@ -1,4 +1,4 @@
-package ro.adlabs.nofap.api;
+package org.nofap.emergency.api;
 
 import io.reactivex.Observable;
 import io.reactivex.schedulers.Schedulers;
@@ -7,7 +7,7 @@ import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.scalars.ScalarsConverterFactory;
-import ro.adlabs.nofap.Preferences;
+import org.nofap.emergency.Preferences;
 
 public class NoFapApi {
     public static final String CATEGORY_EMERGENCY = "em";
@@ -25,7 +25,7 @@ public class NoFapApi {
                 .build();
     }
 
-    public static NoFapService getClient() {
+    private static NoFapService getClient() {
         if (service == null) {
             service = new Retrofit.Builder()
                     .client(buildClient())

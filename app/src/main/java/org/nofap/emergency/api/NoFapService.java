@@ -1,4 +1,4 @@
-package ro.adlabs.nofap.api;
+package org.nofap.emergency.api;
 
 import io.reactivex.Observable;
 import retrofit2.http.GET;

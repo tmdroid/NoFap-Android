@@ -1,9 +1,11 @@
 <resources>
-    <string name="app_name">NoFap</string>
+    <string name="app_name">NoFap Emergency</string>
     <string name="text_em">Emergency</string>
     <string name="text_rej">Rejection</string>
     <string name="text_dep">Depression</string>
     <string name="text_rel">Relapsed</string>
     <string name="text_sub">Submit</string>
     <string name="text_religious">Religious</string>
+    <string name="request_sent">Making request</string>
+    <string name="network_error">Network error occurred</string>
 </resources>

@@ -1,34 +1,30 @@
-package ro.adlabs.nofap.activity;
+package org.nofap.emergency.activity;
 
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.customtabs.CustomTabsIntent;
+import android.support.design.widget.Snackbar;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 import io.reactivex.android.schedulers.AndroidSchedulers;
-import ro.adlabs.nofap.Preferences;
-import ro.adlabs.nofap.R;
-import ro.adlabs.nofap.Functions;
-import ro.adlabs.nofap.api.NoFapApi;
+import org.nofap.emergency.Preferences;
+import org.nofap.emergency.R;
+import org.nofap.emergency.Functions;
+import org.nofap.emergency.api.NoFapApi;
 
 public class Home extends AppCompatActivity implements View.OnClickListener {
-
-    public static final String INTENT_FILTER_SERVICE_READY = "ro.adlabs.nofap.SERVICE_READY";
-    public static final String INTENT_EXTRA_NAME = "newUrl";
-
     @BindView(R.id.cb_religious)
     CheckBox cbReligious;
 
@@ -47,15 +43,21 @@ public class Home extends AppCompatActivity implements View.OnClickListener {
     @BindView(R.id.ll_religious)
     LinearLayout llReligious;
 
+    @BindView(R.id.root)
+    RelativeLayout relativeLayout;
+
     Unbinder unbinder;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+/*
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
+*/
 
         setContentView(R.layout.activity_home);
         unbinder = ButterKnife.bind(this);
@@ -99,15 +101,27 @@ public class Home extends AppCompatActivity implements View.OnClickListener {
         if (isFinishing()) unbinder.unbind();
     }
 
+    /**
+     * Load post from certain category of posts
+     *
+     * @param category
+     */
     private void loadCategory(String category) {
+        Snackbar.make(relativeLayout, R.string.request_sent, Snackbar.LENGTH_SHORT)
+                .show();
+
         NoFapApi.load(category)
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(this::loadUrlInBrowser, t -> {
                     t.printStackTrace();
-                    Toast.makeText(this, "Network error occured", Toast.LENGTH_LONG).show();
+                    Toast.makeText(this, R.string.network_error, Toast.LENGTH_LONG).show();
                 });
     }
 
+    /**
+     * Load the specified url in a browser or in Chrome Custom Tabs
+     * @param url
+     */
     private void loadUrlInBrowser(String url) {
         if (Functions.isChromeCustomTabsSupported()) {
             CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();

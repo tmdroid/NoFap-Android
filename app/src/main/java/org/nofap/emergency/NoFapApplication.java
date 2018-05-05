@@ -1,11 +1,11 @@
-package ro.adlabs.nofap;
+package org.nofap.emergency;
 
 import android.content.Context;
 
 /**
  * Created by Danny on 9/9/2016.
  */
-public class Application extends android.app.Application {
+public class NoFapApplication extends android.app.Application {
 
     private static Context mContext = null;
 

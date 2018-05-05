@@ -1,4 +1,4 @@
-package ro.adlabs.nofap;
+package org.nofap.emergency;
 
 import android.content.ComponentName;
 import android.content.Context;
@@ -8,9 +8,12 @@ import android.support.customtabs.CustomTabsClient;
 import android.support.customtabs.CustomTabsServiceConnection;
 import android.widget.CheckBox;
 
-import ro.adlabs.nofap.Application;
-
 public class Functions {
+    /**
+     * Change the state of the religious post request in the shared preferences
+     *
+     * @param religious
+     */
     public static void religious(CheckBox religious) {
         if (religious.isChecked()) {
             religious.setChecked(false);
@@ -19,6 +22,10 @@ public class Functions {
         }
     }
 
+    /**
+     * Open the form to add a new item to the emergency database
+     * @param context
+     */
     public static void submitNew(Context context) {
         String url = "https://emergency.nofap.com/suggestor.php";
         Intent i = new Intent(Intent.ACTION_VIEW);
@@ -34,7 +41,7 @@ public class Functions {
      * @return whether custom tabs are supported
      */
     public static boolean isChromeCustomTabsSupported() {
-        Context context = Application.getContext();
+        Context context = NoFapApplication.getContext();
         Intent serviceIntent = new Intent("android.support.customtabs.action.CustomTabsService");
         serviceIntent.setPackage("com.android.chrome");
 

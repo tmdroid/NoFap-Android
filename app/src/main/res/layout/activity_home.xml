@@ -2,9 +2,10 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="ro.adlabs.nofap.activity.Home">
+    tools:context=".activity.Home">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -28,14 +29,17 @@
                 android:layout_height="match_parent"
                 android:background="?android:attr/selectableItemBackground"
                 android:clickable="true"
+                android:focusable="true"
                 android:gravity="center"
                 android:orientation="horizontal">
 
                 <ImageView
                     android:layout_width="140dp"
                     android:layout_height="120dp"
+                    android:layout_marginEnd="5dp"
                     android:layout_marginRight="5dp"
-                    android:background="@drawable/redcross" />
+                    android:background="@drawable/redcross"
+                    android:contentDescription="@string/app_name" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -62,6 +66,7 @@
                 android:layout_height="match_parent"
                 android:background="?android:attr/selectableItemBackground"
                 android:clickable="true"
+                android:focusable="true"
                 android:gravity="center"
                 android:orientation="horizontal">
 
@@ -89,6 +94,7 @@
                 android:layout_height="match_parent"
                 android:background="?android:attr/selectableItemBackground"
                 android:clickable="true"
+                android:focusable="true"
                 android:gravity="center"
                 android:orientation="horizontal">
 
@@ -118,6 +124,7 @@
                 android:layout_height="match_parent"
                 android:background="?android:attr/selectableItemBackground"
                 android:clickable="true"
+                android:focusable="true"
                 android:gravity="center"
                 android:orientation="horizontal">
 
@@ -138,8 +145,10 @@
         android:id="@+id/ll_religious"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
+        android:layout_marginEnd="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginTop="10dp"
         android:background="@color/background_gray"
@@ -150,6 +159,7 @@
             android:layout_height="match_parent"
             android:background="?android:attr/selectableItemBackground"
             android:clickable="true"
+            android:focusable="true"
             android:gravity="center"
             android:orientation="horizontal">
 
