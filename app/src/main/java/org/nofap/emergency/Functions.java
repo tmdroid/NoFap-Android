@@ -27,7 +27,7 @@ public class Functions {
      * @param context
      */
     public static void submitNew(Context context) {
-        String url = "https://emergency.nofap.com/suggestor.php";
+        String url = "https://emergency.nofap.com/suggestor.html";
         Intent i = new Intent(Intent.ACTION_VIEW);
         i.setData(Uri.parse(url));
         context.startActivity(i);
